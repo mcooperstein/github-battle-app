@@ -1,12 +1,22 @@
 import React, {Component} from 'react';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import Popular from './Popular';
+import Home from './Home';
+import Battle from './Battle';
+import Navbar from './Navbar';
+
 
 class App extends Component {
   render(){
     return (
-      <div className="container">
-        <Popular />
-      </div>
+      <Router>
+        <div className="container">
+          <Navbar />
+        <Route exact path="/" component={Home}/>
+          <Route path="/popular" component={Popular}/>
+        <Route path="/battle" component={Battle}/>
+        </div>
+      </Router>
     )
   }
 }
