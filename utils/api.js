@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 // To prevent rate limit on # of requests
-// let id="YOUR_CLIENT_ID";
-// let secretId="YOUR_SECRET_ID";
-// let params=`?client_id=${id}&client_secret=${secretId}`;
+let id="YOUR_CLIENT_ID";
+let secretId="YOUR_SECRET_ID";
+let params=`?client_id=${id}&client_secret=${secretId}`;
 
 function getProfile(username){
   return axios.get(`https://api.github.com/users/${username}${params}`).then((user)=>{
