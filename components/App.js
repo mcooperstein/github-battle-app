@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import Popular from './Popular';
 import Home from './Home';
 import Battle from './Battle';
@@ -11,10 +11,15 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-          <Navbar />
-        <Route exact path="/" component={Home}/>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home}/>
           <Route path="/popular" component={Popular}/>
-        <Route path="/battle" component={Battle}/>
+          <Route exact path="/battle" component={Battle}/>
+          <Route render={()=>{
+              return <p>Not Found</p>
+            }} />
+        </Switch>
         </div>
       </Router>
     )

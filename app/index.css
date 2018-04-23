@@ -70,3 +70,20 @@ a {
   width: 150px;
   border-radius: 50%;
 }
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battle-button {
+  width:40%;
+  display: block;
+  margin: 20px auto;
+  background-color:black;
+  color:white;
+  text-align: center;
+  padding:10px;
+  cursor: pointer;
+}
