@@ -5,6 +5,10 @@ body {
   Cantarell,"Helvetica Neue",sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 ul {
   padding: 0;
 }
@@ -21,6 +25,33 @@ a {
 .container {
   max-width:1200px;
   margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-items: center;
+}
+
+.column input {
+  border-radius: 3px;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid rgba(0,0,0,0.43);
+  font-size: 16px;
+  width: 80%;
+}
+
+.column label, .header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .languages {
@@ -77,13 +108,14 @@ a {
   align-items: center;
 }
 
-.battle-button {
+.button {
   width:40%;
   display: block;
-  margin: 20px auto;
+  margin: 10px auto;
   background-color:black;
   color:white;
   text-align: center;
-  padding:10px;
+  font-weight: bolder;
+  padding:5px;
   cursor: pointer;
 }
