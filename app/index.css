@@ -120,6 +120,17 @@ a {
   cursor: pointer;
 }
 
+.battle-button{
+  transition: 1s all;
+}
+
+.battle-button:hover {
+  background-color:red;
+  color: white;
+  transform: scale(1.1);
+  padding: 10px;
+}
+
 .reset {
   border: none;
   background:transparent;
